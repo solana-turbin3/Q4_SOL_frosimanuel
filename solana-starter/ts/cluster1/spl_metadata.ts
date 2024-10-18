@@ -22,18 +22,15 @@ umi.use(signerIdentity(createSignerFromKeypair(umi, keypair)));
     try {
         // Start here
         let accounts: CreateMetadataAccountV3InstructionAccounts = {
-            metadata: mint,
             mint: mint,
             mintAuthority: signer,
-            payer: signer,
-            updateAuthority: signer
         }
 
          let data: DataV2Args = {
             name: "I WILL PUMP",
             symbol: "IWP",
             uri: "https://ipfs.io/ipfs/QmdK52CxCM3W8PSFgfqdFECEYjhK3u3sPprXZQzsGDR28v",
-            sellerFeeBasisPoints: 0,
+            sellerFeeBasisPoints: 500,
             creators: null,
             collection: null,
             uses: null
