@@ -9,8 +9,9 @@ const umi = createUmi('https://api.devnet.solana.com');
 
 let keypair = umi.eddsa.createKeypairFromSecretKey(new Uint8Array(wallet));
 const signer = createSignerFromKeypair(umi, keypair);
-umi.use(signerIdentity(createSignerFromKeypair(umi, keypair)));
+
 umi.use(irysUploader());
+umi.use(signerIdentity(signer));
 
 (async () => {
     try {

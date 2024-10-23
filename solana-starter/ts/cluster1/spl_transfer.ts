@@ -1,5 +1,5 @@
 import { Commitment, Connection, Keypair, LAMPORTS_PER_SOL, PublicKey } from "@solana/web3.js"
-import wallet from "../wba-wallet.json"
+import wallet from "../Turbin3-wallet.json"
 import { getOrCreateAssociatedTokenAccount, transfer } from "@solana/spl-token";
 
 // We're going to import our keypair from the wallet file
@@ -10,10 +10,10 @@ const commitment: Commitment = "confirmed";
 const connection = new Connection("https://api.devnet.solana.com", commitment);
 
 // Mint address
-const mint = new PublicKey("<mint address>");
+const mint = new PublicKey("2Pq9Faj9V6YrQaUP3mnHEAxRbfhjw13iS7mxymVks2xM");
 
 // Recipient address
-const to = new PublicKey("<receiver address>");
+const to = keypair.publicKey;
 
 (async () => {
     try {

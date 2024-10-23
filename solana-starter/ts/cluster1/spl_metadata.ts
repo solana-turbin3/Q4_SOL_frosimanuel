@@ -28,7 +28,7 @@ umi.use(signerIdentity(createSignerFromKeypair(umi, keypair)));
 
          let data: DataV2Args = {
             name: "I WILL PUMP",
-            symbol: "IWP",
+            symbol: "IWPP",
             uri: "https://ipfs.io/ipfs/QmdK52CxCM3W8PSFgfqdFECEYjhK3u3sPprXZQzsGDR28v",
             sellerFeeBasisPoints: 500,
             creators: null,
